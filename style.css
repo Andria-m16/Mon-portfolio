@@ -50,6 +50,10 @@ nav>a:hover{
     background-color: #3a74ea;
 }
 
+.nav-link.active{
+    background-color: #3a74ea;
+}
+
 main{
     padding: 0 50px;
     animation: slideIn 1s ease-out forwards;
