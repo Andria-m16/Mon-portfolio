@@ -164,6 +164,10 @@ article{
         grid-row: auto;
     }
 
+    th>img{
+        width: 70px;
+    }
+
     nav{
         display: grid;
         grid-template-columns: auto auto;
@@ -196,6 +200,10 @@ article{
 
     nav{
         font-size: 13px;
+    }
+
+    th>img{
+        width: 35px;
     }
 }
 
