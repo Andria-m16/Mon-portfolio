@@ -104,13 +104,12 @@ footer{
     padding: 10px 0;
 }
 
-article{
-    margin-bottom: 20px;
+#copyright{
+    text-align: center;
 }
 
-ul{
-    list-style: none;
-    padding-left: 20px;
+article{
+    margin-bottom: 20px;
 }
 
 .certif{
@@ -155,7 +154,7 @@ ul{
     grid-column: 2 / 4;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     #tableau {
         grid-template-columns: 1fr;
     }
@@ -163,6 +162,40 @@ ul{
     #t1, #t2, #t3, #t4 {
         grid-column: 1 / -1;
         grid-row: auto;
+    }
+
+    nav{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "accueil skill"
+            "projet contact";
+        gap: 4px;
+    }
+
+    header{
+        position: unset;
+        padding: 20px 20px;
+    }
+
+    #appelation{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+}
+
+@media (max-width: 500px) {
+    #appelation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 13px;
+    }
+
+    nav{
+        font-size: 13px;
     }
 }
 
@@ -174,8 +207,6 @@ table{
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 125%;
-    box-sizing: border-box;
-
 }
 
 caption{
