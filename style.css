@@ -77,6 +77,12 @@ main{
 
 h1{
     margin-bottom: 5px;
+    color: #00d9ff;
+}
+
+#présentation{
+    font-size: 20px;
+    line-height: 25px;
 }
 
 .link{
@@ -115,14 +121,14 @@ article{
 
 .certif{
     display: flex;
-    align-items: center;
 }
 
 .certif::before{
     content: url("./assets-svg/check.svg");
     width: 20px; 
-    height: 20px; 
+    height: 20px;
     padding-right: 10px;
+    padding-top: 3px;
 }
 
 #langue{
@@ -179,15 +185,33 @@ article{
         gap: 4px;
     }
 
+    #contact{
+        display: flex;
+        justify-content: center;
+    }
+
     header{
         position: unset;
-        padding: 20px 20px;
+        padding: 5px 20px;
     }
 
     #appelation{
         display: flex;
         align-items: center;
         gap: 2px;
+    }
+
+    .certif::before{
+    padding-right: 10px;
+    }
+
+    footer{
+        line-height: 15px;
+        padding-top: 5px;
+    }
+
+    footer>div>img{
+        width: 40px;
     }
 }
 
@@ -228,29 +252,46 @@ caption{
     border-radius: 50px;
     background-color: #181a3d;
     color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.pourcentage:hover{
+    transform: scale(1.03);
+}
+
+section{
+    display: inline-block;
 }
 
 .projetmusic{
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
     margin-right: 15px;
     margin-top: 10px;
 }
 
 audio{
+    display: flex;
     width: 300px;
     height: 300px;
     background: url("./assets-svg/decor-noel.svg") no-repeat center center;
     background-size: cover;
-    display: flex;
     flex-direction: column;
     justify-content: flex-end;
     border-radius: 25px;
 }
 
 .logo{
+    display: inline-block;
     border-radius: 10px;
     margin-right: 15px;
     margin-top: 10px;
+    width: 300px;
+}
+
+.projetgraph{
+    list-style: none;
 }
 
 .projetgraph::before{
