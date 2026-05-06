@@ -5,6 +5,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
     color: white;
     line-height: 1.6;
     background: linear-gradient(to bottom, #18192b,#005790 );
@@ -75,14 +76,14 @@ main{
     margin: 10px 0;
 }
 
-h1{
+h2{
     margin-bottom: 5px;
     color: #00d9ff;
 }
 
 #présentation{
-    font-size: 20px;
     line-height: 25px;
+    width: 75%;
 }
 
 .link{
@@ -112,6 +113,7 @@ footer{
 
 #copyright{
     text-align: center;
+    font-size: 17px;
     color: rgb(179, 175, 175);
 }
 
@@ -136,10 +138,8 @@ article{
 }
 
 #tableau{
-    margin-right: 50px;
     display: grid;
     gap: 15px;
-    width: 100%;
     max-width: 1000px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -161,18 +161,52 @@ article{
     grid-column: 2 / 4;
 }
 
-@media (max-width: 768px) {
+table{
+    color: #18192B;
+    border: 2px solid #00c8ff;
+    background-color: #ffffffce;
+    border-radius: 13px;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 125%;
+}
+
+caption{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.pourcentage{
+    border-radius: 50px;
+    background-color: #181a3d;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.pourcentage:hover{
+    transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+    body{
+        font-size: 3vw;
+    }
+    
     #tableau {
         grid-template-columns: 1fr;
     }
 
     #t1, #t2, #t3, #t4 {
-        grid-column: 1 / -1;
+        grid-column: 1;
         grid-row: auto;
+        padding: 10px;
     }
 
     th>img{
-        width: 70px;
+        min-width: 25%;
+        max-width: 50%;
+        height: auto;
     }
 
     nav{
@@ -216,47 +250,28 @@ article{
 }
 
 @media (max-width: 500px) {
+    body{
+        font-size: 4vw;
+        line-height: 1.5;
+    }
+
+    main{
+        padding: 0 25px;
+    }
+    
     #appelation{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    #t1, #t2, #t3, #t4 {
+        padding: 5px;
+    }
+
+    #copyright{
         font-size: 13px;
     }
-
-    nav{
-        font-size: 13px;
-    }
-
-    th>img{
-        width: 35px;
-    }
-}
-
-table{
-    color: #18192B;
-    border: 2px solid #00c8ff;
-    background-color: #ffffffce;
-    border-radius: 13px;
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 125%;
-}
-
-caption{
-    text-align: center;
-    font-weight: bold;
-    color: white;
-}
-
-.pourcentage{
-    border-radius: 50px;
-    background-color: #181a3d;
-    color: white;
-    transition: 0.3s ease-in-out;
-}
-
-.pourcentage:hover{
-    transform: scale(1.03);
 }
 
 section{
@@ -303,6 +318,16 @@ audio{
     display: flex;       
     align-items: center; 
     gap: 8px;
+}
+
+span>a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+span>a:hover{
+    color: #0095ff;
 }
 
 #formulaire{
