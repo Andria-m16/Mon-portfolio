@@ -337,7 +337,7 @@ span>a:hover{
     padding: 20px;
     color: white;
     max-width: 300px;
-    min-width: auto;
+    min-width: 0;
 }
 
 #tete{
